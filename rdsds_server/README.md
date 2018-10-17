@@ -1,4 +1,4 @@
-# DSDS-RESTful
+# RDSDS
 Flask/python enabled DSDS service 
 
 # Intro
@@ -14,11 +14,9 @@ Service components included:
 * __Data Set Move__: starts and monitors the data transfer process
 * __Data Set Notify__: notifies all subscribers of a given data set
 
-This repo contains DSDS REST service made available by using flask, a minimal yet powerfull python web framework. For testing purposes the entire setup is done localy. For now we are using flask built in web server which makes it much easier to develop and test the service. Current setup is not intended for production purposes because for this we will need dedicated WTSGi installed on top of Apche or Nginx. 
-
 # Workflow
 
-![image](https://github.com/EMBL-EBI-TSI/DSDS-RESTful/blob/devel/DSDS%20Workflow.jpeg)
+![image](https://github.com/EMBL-EBI-TSI/RDSDS/blob/devel/rdsds_server/image/RDSDS_Workflow.jpg)
 
 # Requirements
 * Python 2.7
@@ -40,7 +38,7 @@ Virtualenv is preferred but since python 2.7 is needed you can easily install di
 
 Import file dsds.sql (creates, user, db, tables, sets user passwrod and db ownership)
 ````
-psql < dsds.sql
+psql < create_tbls.sql
 ````
 
 # Usage
@@ -59,8 +57,8 @@ The command will start the service and give the following output:
 ```
 
 # Login in with Google account
-![image](https://github.com/EMBL-EBI-TSI/DSDS-RESTful/blob/devel/SSO.png)
-![image](https://github.com/EMBL-EBI-TSI/DSDS-RESTful/blob/devel/SSO_1.png)
+![image](https://github.com/EMBL-EBI-TSI/RDSDS/blob/devel/rdsds_server/image/SSO.png)
+![image](https://github.com/EMBL-EBI-TSI/RDSDS/blob/devel/rdsds_server/image/SSO_1.png)
 
 # Commandlines
 ### Data Set Registration
