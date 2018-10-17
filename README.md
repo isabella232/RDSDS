@@ -1,6 +1,6 @@
 # RDSDS
 
-# Intro
+# Introduction
 The Reference Data Set Distribution Service (RDSDS) will be offered as a component in the emerging ELIXIR Compute Platform, distributing reference data sets (from the ELIXIR Data Platform) and from individual researchers from where the data sets originate to where the data sets are to be analysed. This service would hold meta-data relating to the data stored in the Reference Data Set and the files that comprised a release. Once a release has been made, the files will be transferred to sites subscribing to releases of this Data Set using existing services and protocols (e.g. FTS3, Globus Transfer and GridFTP).
 
 # Workflow
@@ -8,40 +8,32 @@ The Reference Data Set Distribution Service (RDSDS) will be offered as a compone
 ![image](https://github.com/EMBL-EBI-TSI/RDSDS/blob/devel/rdsds_server/image/RDSDS_Workflow.jpg)
 
 # RDSDS Client
-'Client Side', RDSDS Client use ELIXIR AAI for authentication, make sure the client environment installed browser service. At the moment, RDSDS is running on ELIXIR Test environment, please be confirmed if you belong to ELIXIR Test VO (Virtual Organisation), if you can more details [here](https://perun.elixir-czech.cz/fed/registrar//registrar/?vo=elixir_test).
+`Client Side`, RDSDS Client use ELIXIR AAI for authentication, make sure the client environment installed browser service. At the moment, RDSDS is running on ELIXIR Test environment, please be confirmed if you belong to ELIXIR Test VO (Virtual Organisation), if you can more details [here](https://perun.elixir-czech.cz/fed/registrar//registrar/?vo=elixir_test).
 
 Currently support 'Windows 10 Pro', 'Centos 7', 'Fedora 28', 'Ubuntu' and 'Mac OS'
 
 # RDSDS Server
+`Server Side` requirements are Python 2.7, Flask 0.11.1, Postgres >= 9.x and Sqlalchemy
 
-# Requirements
-* Python 2.7
-* Flask 0.11.1
-* postgres >= 9.x
-* Sqlalchemy
-
-# Setup
+## Setup
 
 Virtualenv is preferred but since python 2.7 is needed you can easily install directly.
 
 * Install Flask: [Installation](http://flask.pocoo.org/docs/0.12/installation/).
 * Install postgresql
-	* [Mac os x](https://postgresapp.com/).
-	* [Windows & Linux](: https://www.bigsql.org/postgresql/installers.jsp).
-* Install Sqlalchemy: [Installation](http://pythoncentral.io/how-to-install-sqlalchemy/).
+	* [Mac OS](https://postgresapp.com/)
+	* [Windows & Linux](https://www.bigsql.org/postgresql/installers.jsp)
+* Install Sqlalchemy: [Installation](http://pythoncentral.io/how-to-install-sqlalchemy/)
 
-# Setup database
+## Setup database
 
 Import file dsds.sql (creates, user, db, tables, sets user password and db ownership)
 ````
 psql < create_tbls.sql
 ````
 
-# Login in with Google account
-![image](https://github.com/EMBL-EBI-TSI/RDSDS/blob/devel/rdsds_server/image/SSO.png)
-![image](https://github.com/EMBL-EBI-TSI/RDSDS/blob/devel/rdsds_server/image/SSO_1.png)
+# RDSDS Usage
 
-# Commandlines
 ### Data Set Registration
 
 ***JSON template***
@@ -59,7 +51,9 @@ psql < create_tbls.sql
 }
 ````
 
-***Login to a client shell***
+***Login in with Google account***
+![image](https://github.com/EMBL-EBI-TSI/RDSDS/blob/devel/rdsds_server/image/SSO.png)
+![image](https://github.com/EMBL-EBI-TSI/RDSDS/blob/devel/rdsds_server/image/SSO_1.png)
 ````
 (dsds>)_
 ````
