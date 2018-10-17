@@ -1,22 +1,18 @@
 # RDSDS
-Flask/python enabled DSDS service 
 
 # Intro
 The Reference Data Set Distribution Service (RDSDS) will be offered as a component in the emerging ELIXIR Compute Platform, distributing reference data sets (from the ELIXIR Data Platform) and from individual researchers from where the data sets originate to where the data sets are to be analysed. This service would hold meta-data relating to the data stored in the Reference Data Set and the files that comprised a release. Once a release has been made, the files will be transferred to sites subscribing to releases of this Data Set using existing services and protocols (e.g. FTS3, Globus Transfer and GridFTP).
 
-Service components included:
-* __Data Set Registration__: data providers declare data set to the replication service
-* __Data Set Search__: provides semantic catalog to consumers
-* __Data Set Subscription__: subscribes data consumers to the data set
-* __Data Set Validation__: data consumers can perform integrity checking by listing the expected files for a given data set
-* __Data Set Release__: data providers register updates to existing data sets
-* __Data Set Export__: data providers and consumers query the replica catalog to find all copies of a data set
-* __Data Set Move__: starts and monitors the data transfer process
-* __Data Set Notify__: notifies all subscribers of a given data set
-
 # Workflow
 
 ![image](https://github.com/EMBL-EBI-TSI/RDSDS/blob/devel/rdsds_server/image/RDSDS_Workflow.jpg)
+
+# RDSDS Client
+'Client Side', RDSDS Client use ELIXIR AAI for authentication, make sure the client environment installed browser service. At the moment, RDSDS is running on ELIXIR Test environment, please be confirmed if you belong to ELIXIR Test VO (Virtual Organisation), if you can more details [here](https://perun.elixir-czech.cz/fed/registrar//registrar/?vo=elixir_test).
+
+Currently support 'Windows 10 Pro', 'Centos 7', 'Fedora 28', 'Ubuntu' and 'Mac OS'
+
+# RDSDS Server
 
 # Requirements
 * Python 2.7
@@ -28,33 +24,18 @@ Service components included:
 
 Virtualenv is preferred but since python 2.7 is needed you can easily install directly.
 
-* Install Flask: http://flask.pocoo.org/docs/0.12/installation/
+* Install Flask: [Installation](http://flask.pocoo.org/docs/0.12/installation/).
 * Install postgresql
-	* mac os x: https://postgresapp.com/
-	* win & lin: https://www.bigsql.org/postgresql/installers.jsp
-* Install Sqlalchemy: http://pythoncentral.io/how-to-install-sqlalchemy/
+	* [Mac os x](https://postgresapp.com/).
+	* [Windows & Linux](: https://www.bigsql.org/postgresql/installers.jsp).
+* Install Sqlalchemy: [Installation](http://pythoncentral.io/how-to-install-sqlalchemy/).
 
 # Setup database
 
-Import file dsds.sql (creates, user, db, tables, sets user passwrod and db ownership)
+Import file dsds.sql (creates, user, db, tables, sets user password and db ownership)
 ````
 psql < create_tbls.sql
 ````
-
-# Usage
-
-After the repo has been cloned localy you need to ***start a flask service***:
-
-```
-python dsds_rest_service.py
-```
-The command will start the service and give the following output:
-```
-* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-* Restarting with stat
-* Debugger is active!
-* Debugger pin code: 184-594-781
-```
 
 # Login in with Google account
 ![image](https://github.com/EMBL-EBI-TSI/RDSDS/blob/devel/rdsds_server/image/SSO.png)
@@ -62,7 +43,6 @@ The command will start the service and give the following output:
 
 # Commandlines
 ### Data Set Registration
-Data Provider fills in a JSON file and executes the command line to register a dataset. The following fields of JSON file need to be completed. Dataset Persistent Identifier (PID) will be shown on the screen.<br />
 
 ***JSON template***
 ````
@@ -79,9 +59,8 @@ Data Provider fills in a JSON file and executes the command line to register a d
 }
 ````
 
-Login to a client shell:
+***Login to a client shell***
 ````
-./dsds-client-cmd.py
 (dsds>)_
 ````
 
