@@ -1,4 +1,4 @@
-# RDSDS
+# RDSDS - Reference DataSet Distribution Service
 
 # Introduction
 The Reference Data Set Distribution Service (RDSDS) is offered as a component in the [ELIXIR Compute Platform](https://www.elixir-europe.org/platforms/compute) to distribute reference data sets from the [ELIXIR Data Platform](https://www.elixir-europe.org/platforms/data) and from individual researchers from where the data sets originate to where the data sets are to be analysed. This service holds technical metadata relating to the data stored in the Reference Data Set and the files that comprises a dataset release version. Once a release has been made, the files will be transferred to sites subscribing to releases of this Reference Data Set using existing services and file transfer protocols and services (e.g. FTS3, Globus Online and GridFTP).
