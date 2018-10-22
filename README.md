@@ -1,7 +1,7 @@
 # RDSDS
 
 # Introduction
-The Reference Data Set Distribution Service (RDSDS) will be offered as a component in the emerging ELIXIR Compute Platform, distributing reference data sets (from the ELIXIR Data Platform) and from individual researchers from where the data sets originate to where the data sets are to be analysed. This service would hold meta-data relating to the data stored in the Reference Data Set and the files that comprised a release. Once a release has been made, the files will be transferred to sites subscribing to releases of this Data Set using existing services and protocols (e.g. FTS3, Globus Transfer and GridFTP).
+The Reference Data Set Distribution Service (RDSDS) is offered as a component in the [ELIXIR Compute Platform](https://www.elixir-europe.org/platforms/compute) to distribute reference data sets from the [ELIXIR Data Platform](https://www.elixir-europe.org/platforms/data) and from individual researchers from where the data sets originate to where the data sets are to be analysed. This service holds technical metadata relating to the data stored in the Reference Data Set and the files that comprises a dataset release version. Once a release has been made, the files will be transferred to sites subscribing to releases of this Reference Data Set using existing services and file transfer protocols and services (e.g. FTS3, Globus Online and GridFTP).
 
 # Workflow
 
@@ -13,7 +13,7 @@ The Reference Data Set Distribution Service (RDSDS) will be offered as a compone
 Currently support 'Windows 10 Pro', 'Centos 7', 'Fedora 28', 'Ubuntu' and 'Mac OS'
 
 # RDSDS Server
-`Server Side` requirements are Python 2.7, Flask 0.11.1, Postgres >= 9.x and Sqlalchemy
+`Server Side` requirements are Python 2.7, Flask 0.11.1, Postgres >= 9.x and SQLAlchemy
 
 ## Setup
 
