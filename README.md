@@ -1,3 +1,4 @@
+![PUBLIC](https://img.shields.io/badge/-PUBLIC-success)
 # RDSDS - Reference DataSet Distribution Service
 
 # Introduction
